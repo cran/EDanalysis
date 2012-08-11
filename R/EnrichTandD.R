@@ -1,5 +1,6 @@
 EnrichTandD <-
-function(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",TestThreshold=0.05,DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5){
+function(myInterestedGenes,whichOnto="BP",TestMthod="Hyper",DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5){
+
 cat("There are two steps in this process: \n(1) Gene annotation using topGO package.This will take a few minutes, please be patient......")
 cat("\n")
 AnnResult=AnnGeneToGO(myInterestedGenes=myInterestedGenes,whichOnto=whichOnto,mapping=mapping,ID = ID,nodeSize = nodeSize);
@@ -43,7 +44,7 @@ if(TestMthod=="Fisher"){
      }
    if(DegreeMethod=="RE"){
          DegreeResult=sapply(1:Size[1],function(x) RE(AnnResult[x,4],AnnResult[x,5],AnnResult[x,6],AnnResult[x,7]))
-         ALLresult=data.frame(ALLresult,Re=DegreeResult) 
+         ALLresult=data.frame(ALLresult,RE=DegreeResult) 
      }
 ##ALLresult=subset(ALLresult,Fisher_p<TestThreshold)
 }

@@ -8,7 +8,7 @@ Fisher's exact test in enrichment analysis
 Test gene enrichment using the Fisher's exact test.
 }
 \usage{
-EnrichFisher(nN = BackgroundGeneNum, nK = InterestedGeneNum, nG = FunctionalgeneNum, ng = AnnotatedGeneNum)
+EnrichFisher(nN, nK, nG, ng)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

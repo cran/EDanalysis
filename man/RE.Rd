@@ -7,7 +7,7 @@ Relative enrichment factor
 \description{RE: The relative ratio of enrichment.
 }
 \usage{
-RE(nN = BackgroundGeneNum, nK = InterestedGeneNum, nG = FunctionalgeneNum, ng = AnnotatedGeneNum)
+RE(nN, nK, nG, ng)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -3,7 +3,7 @@
 \alias{EDanalysis}
 \docType{package}
 \title{
-A R Package For Gene Enrichment Disequilibrium Analysis 
+An R Package For Gene Enrichment Disequilibrium Analysis 
 }
 \description{
 ED (Enrichment Disequilibrium) is an indicator to measure the degree of enrichment.
@@ -58,8 +58,8 @@ Integrated analysis:
 \tabular{ll}{
 Package: \tab EDanalysis\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2012-08-01\cr
+Version: \tab 1.0.1\cr
+Date: \tab 2012-08-11\cr
 License: \tab LGPL\cr
 }
 
@@ -117,7 +117,7 @@ result4
 #library(GOstats)
 #data(EDAnnoDataExample)   ##Import example data
 #mydata<-EDAnnoDataExample ##Import example data
-#rawTandDresults<-EnrichTandD(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",TestThreshold=0.05,DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5)   ##Annotate genes, calculate enrichment test, calculate enrich degree. 
+#rawTandDresults<-EnrichTandD(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5)   ##Annotate genes, calculate enrichment test, calculate enrich degree. 
 #threshold=0.05/dim(rawTandDresults)[1]     ##Bonferroni correction threshold
 #results<-FilterTandDresults(rawTandDresults=rawTandDresults,nodeSize = 20,nodeInterestedGeneSize=20,Pvalue=threshold)    ##Filter results
 #PlotGOgraph(StandFormatData=results,whichOnto="BP",Colorgroup="red",NodeColorBasedOn="EnrichDegree",shape="ellipse",fontsize=12,ShowAnnoGeneNum=TRUE,ShowTestPvalue=TRUE,ShowDegree=TRUE)       ##plot a GO tree / fill color based on the values of ED

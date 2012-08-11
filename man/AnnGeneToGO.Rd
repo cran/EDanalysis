@@ -8,7 +8,7 @@ Annotate Genes To GO
 annotate interesting gene list to GO
 }
 \usage{
-AnnGeneToGO(myInterestedGenes = mydata, whichOnto = "BP", mapping = "org.Hs.eg.db", ID = "symbol", nodeSize = 5)
+AnnGeneToGO(myInterestedGenes, whichOnto = "BP", mapping = "org.Hs.eg.db", ID = "symbol", nodeSize = 5)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

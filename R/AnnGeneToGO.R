@@ -1,5 +1,6 @@
 AnnGeneToGO <-
-function(myInterestedGenes=mydata,whichOnto="BP",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5){
+function(myInterestedGenes,whichOnto="BP",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5){
+
 cat("Gene annotation start:\n")
 MyGetTermsDefinition <- function(whichTerms, ontology, numChar = 150, multipLines = FALSE) {
   qTerms <- paste(paste("'", whichTerms, "'", sep = ""), collapse = ",")
@@ -37,7 +38,9 @@ GOdata <- new("topGOdata",
 object<-GOdata
 nodeLevel <- buildLevels(graph(object), leafs2root = TRUE)
 nodeLevel_1 <- unlist(mget(sort(usedGO(GOdata)), envir = nodeLevel$nodes2level))
-
+nN <- c()
+nG <- c()
+ng <- c()
 GOID=sort(usedGO(GOdata))
 shortNames <- MyGetTermsDefinition(GOID, topGO::ontology(object), numChar = 150)
 GOstatistic<-termStat(GOdata)

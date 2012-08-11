@@ -6,7 +6,7 @@
 \description{The percentage of the 'interesting' genes in the functional gene set.
 }
 \usage{
-EP(nN = BackgroundGeneNum, nK = InterestedGeneNum, nG = FunctionalgeneNum, ng = AnnotatedGeneNum)
+EP(nN, nK, nG, ng)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

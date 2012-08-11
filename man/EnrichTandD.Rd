@@ -8,7 +8,7 @@ Calculate Enrichment Test and Enrichment Degree Indicator
 input a list of genes, calculate enrichment test and enrichment degree indicator
 }
 \usage{
-EnrichTandD(myInterestedGenes = mydata, whichOnto = "BP", TestMthod = "Hyper", TestThreshold = 0.05, DegreeMethod = "ED", mapping = "org.Hs.eg.db", ID = "symbol", nodeSize = 5)
+EnrichTandD(myInterestedGenes, whichOnto = "BP", TestMthod = "Hyper", DegreeMethod = "ED", mapping = "org.Hs.eg.db", ID = "symbol", nodeSize = 5)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -20,9 +20,6 @@ character string specifying one of the three GO ontologies, namely: "BP", "MF", 
 }
   \item{TestMthod}{
 character string specifieng gene enrichment test to use. Currently only the following methods can be used: c("Hyper", "Fisher")
-}
-  \item{TestThreshold}{
-numeric, the threshold of enrichment test. For example: 0.05 represents P<0.05. You can obtain all the test result by setting a value greater than 1 (such as 1.1).  
 }
   \item{DegreeMethod}{
 character string specifieng gene enrichment degree to use. Currently only the following methods can be used: c("ED", "ER", "EP", "RE")
@@ -106,7 +103,7 @@ See examples.
 #library(GOstats)
 #data(EDAnnoDataExample)   ##Import example data
 #mydata<-EDAnnoDataExample #Import example data
-#rawTandDresults<-EnrichTandD(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",TestThreshold=0.05,DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5)  ##Annotate genes, calculate enrichment test, calculate enrich degree. 
+#rawTandDresults<-EnrichTandD(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5)  ##Annotate genes, calculate enrichment test, calculate enrich degree. 
 #####--------Further analysis example---------
 #threshold=0.05/dim(rawTandDresults)[1]  ##Bonferroni correction threshold
 #results<-FilterTandDresults(rawTandDresults=rawTandDresults,nodeSize = 20,nodeInterestedGeneSize=20,Pvalue=threshold)    ##Filter results

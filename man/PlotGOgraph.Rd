@@ -8,7 +8,7 @@ Plot a GO Tree Graph
 plot a GO tree graph
 }
 \usage{
-PlotGOgraph(StandFormatData = myStandData, whichOnto = "BP", Colorgroup = "gray", NodeColorBasedOn = "EnrichDegree", shape = "ellipse", fontsize = 12, ShowAnnoGeneNum = TRUE, ShowTestPvalue = TRUE, ShowDegree = TRUE)
+PlotGOgraph(StandFormatData, whichOnto = "BP", Colorgroup = "gray", NodeColorBasedOn = "EnrichDegree", shape = "ellipse", fontsize = 12, ShowAnnoGeneNum = TRUE, ShowTestPvalue = TRUE, ShowDegree = TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -61,7 +61,7 @@ Florian Hahne, Deepayan Sarkar, the R package Rgraphviz.
 Yongshuai Jiang <jiangyongshuai@gmail.com>
 }
 \note{
-A GO slim.
+please ensure that you have installed the "Graphviz" software.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -89,7 +89,7 @@ A GO slim.
 #library(GOstats)
 #data(EDAnnoDataExample)  ##Import example data
 #mydata<-EDAnnoDataExample ##Import example data
-#rawTandDresults<-EnrichTandD(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",TestThreshold=0.05,DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5)         ##Annotate genes, calculate enrichment test, calculate enrich degree. 
+#rawTandDresults<-EnrichTandD(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5)         ##Annotate genes, calculate enrichment test, calculate enrich degree. 
 #threshold=0.05/dim(rawTandDresults)[1]     ##Bonferroni correction threshold
 #results<-FilterTandDresults(rawTandDresults=rawTandDresults,nodeSize = 20,nodeInterestedGeneSize=20,Pvalue=threshold)      ##Filter results
 #

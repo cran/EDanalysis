@@ -1,5 +1,7 @@
 EP <-
-function(nN=BackgroundGeneNum,nK=InterestedGeneNum,nG=FunctionalgeneNum,ng=AnnotatedGeneNum){
+function(nN,nK,nG,ng){
+
+
   if(ng>nG || ng>nK){
        stop("Error in EP(nN=BackgroundGeneNum,nK=InterestedGeneNum,nG=FunctionalgeneNum,ng=AnnotatedGeneNum)! ng should not be greater than nG or nK!")
        }

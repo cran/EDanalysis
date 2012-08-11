@@ -6,7 +6,7 @@
 ED (Enrichment Disequilibrium) is an indicator to measure the degree of enrichment.
 }
 \usage{
-ED(nN = BackgroundGeneNum, nK = InterestedGeneNum, nG = FunctionalgeneNum, ng = AnnotatedGeneNum)
+ED(nN, nK, nG, ng)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

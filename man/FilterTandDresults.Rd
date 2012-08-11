@@ -108,7 +108,7 @@ See examples.
 #library(GOstats)
 #data(EDAnnoDataExample)  ##Import example data
 #mydata<-EDAnnoDataExample #Import example data
-#rawTandDresults<-EnrichTandD(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",TestThreshold=0.05,DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5)      ##Annotate genes, calculate enrichment test, calculate enrich degree. 
+#rawTandDresults<-EnrichTandD(myInterestedGenes=mydata,whichOnto="BP",TestMthod="Hyper",DegreeMethod="ED",mapping="org.Hs.eg.db",ID = "symbol",nodeSize = 5)      ##Annotate genes, calculate enrichment test, calculate enrich degree. 
 #
 ##########a filter example for this function###############v
 #threshold=0.05/dim(rawTandDresults)[1]   ##Bonferroni correction threshold

@@ -8,7 +8,7 @@ Hypergeometric distribution test in enrichment analysis
 Test gene enrichment using the hypergeometric distribution.
 }
 \usage{
-EnrichHyper(nN = BackgroundGeneNum, nK = InterestedGeneNum, nG = FunctionalgeneNum, ng = AnnotatedGeneNum)
+EnrichHyper(nN, nK, nG, ng)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

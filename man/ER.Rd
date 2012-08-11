@@ -8,7 +8,7 @@ Enrichment Disequilibrium correlation coefficient r
 ER: Enrichment Disequilibrium correlation coefficient r. Another standardized value of ed.
 }
 \usage{
-ER(nN = BackgroundGeneNum, nK = InterestedGeneNum, nG = FunctionalgeneNum, ng = AnnotatedGeneNum)
+ER(nN, nK, nG, ng)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

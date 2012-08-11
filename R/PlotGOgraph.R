@@ -1,5 +1,5 @@
 PlotGOgraph <-
-function(StandFormatData=myStandData,whichOnto="BP",Colorgroup="gray",NodeColorBasedOn="EnrichDegree",shape="ellipse",fontsize=12,ShowAnnoGeneNum=TRUE,ShowTestPvalue=TRUE,ShowDegree=TRUE){
+function(StandFormatData,whichOnto="BP",Colorgroup="gray",NodeColorBasedOn="EnrichDegree",shape="ellipse",fontsize=12,ShowAnnoGeneNum=TRUE,ShowTestPvalue=TRUE,ShowDegree=TRUE){
 rownames(StandFormatData)=StandFormatData[,1]
 GOIDlist=StandFormatData[,1]
 if(whichOnto=="BP"){g1 <- GOGraph(GOIDlist, GOBPPARENTS)}
